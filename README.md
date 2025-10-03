@@ -53,8 +53,29 @@ endmodule
 
 
 # Test Bench
+module ripplecarryadder_tb;
+reg [3:0] A,B;
+reg Cin;
+wire [3:0] Sum;
+wire Cout;
+
+ripplecarryadder uut(A,B,Cin,Sum,Cout);
+
+initial begin
+A=4'b0000; B=4'b0000; Cin=0;
+#10 A=4'b0011; B=4'b0101; Cin=0;
+#10 A=4'b1111; B=4'b0001; Cin=0;
+#10 A=4'b1010; B=4'b0101; Cin=1;
+#10 A=4'b1001; B=4'b1001; Cin=1;
+#10 $stop;
+end
+endmodule
+
 
 # Output Waveform
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9aba350b-7dee-4048-bf52-406b2bdb4c45" />
+
+
 
 # 4 bit Ripple counter using Function
 // 4-bit Ripple Counter using Function
