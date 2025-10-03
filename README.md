@@ -24,6 +24,7 @@ Capture screenshots of the waveform and save the simulation logs. These will be 
 # Verilog Code
 # 4 bit Ripple Adder using Task
 // 4-bit Ripple Carry Adder using Task
+```
 module ripple_adder_task (
     input [3:0] A, B,
     input Cin,
@@ -50,7 +51,7 @@ module ripple_adder_task (
         Cout = c;
     end
 endmodule
-
+```
 
 # Test Bench
 
@@ -58,6 +59,7 @@ endmodule
 
 # 4 bit Ripple counter using Function
 // 4-bit Ripple Counter using Function
+```
 module ripple_counter_func (
     input clk, rst,
     output reg [3:0] Q
@@ -74,7 +76,7 @@ module ripple_counter_func (
             Q <= count(Q);  // use function to increment
     end
 endmodule
-
+```
 # Test Bench
 
 
